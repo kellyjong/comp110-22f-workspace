@@ -40,13 +40,13 @@ if word[i] == guess:
 i = i + 1
 if word[i] == guess:
     print(guess + " found at index " + str(i))
-    count = count +1
+    count = count + 1
 
-if count != 0:
-    print(str(count) + " instances of " + str(guess) + " found in " + word)
-else:
+if count == 0:
     print("No instances of " + guess + " found in " + word)
 
-    
+if count == 1:
+    print("1 instance of " + guess + " found in " + word)
 
-
+if count > 1:
+    print(str(count) + " instances of " + str(guess) + " found in " + word)
