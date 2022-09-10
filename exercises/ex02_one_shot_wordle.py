@@ -2,8 +2,6 @@
 
 __author__ = "730477669"
 
-from string import whitespace
-
 """Establishs secret word and prompting user for a guess"""
 word: str = "python"
 length_word: int = len(word)
@@ -35,14 +33,14 @@ while i < length_word:
         j = 0
         wrong_position = False
 
-        while j < length_word and wrong_position == False:
+        while j < length_word and wrong_position is False:
             if guess[i] == word[j]:
                 wrong_position = True
             else:
                 j += 1
                 wrong_position = False
-                
-        if wrong_position == True:
+
+        if wrong_position is True:
             emoji_boxes += YELLOW_BOX
         else:
             emoji_boxes += WHITE_BOX
