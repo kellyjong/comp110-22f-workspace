@@ -10,10 +10,9 @@ def contains_char(searched_str: str, letter_guess: str) -> bool:
 
     # Loop to check if character in user's guess (letter_guess) is found anywhere in secret word (searched_str).
     j: int = 0
-    wrong_position = False
     length_word: int = len(searched_str)
 
-    while j < length_word and wrong_position is False:
+    while j < length_word:
         if letter_guess == searched_str[j]:
             return True
         else:
